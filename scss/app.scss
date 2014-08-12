@@ -2,7 +2,8 @@
 // Variables
 //--------------------------------------------
 
-$navHeight: 80px;
+$navHeight: 50px;
+$buttonRadius: 15px;
 
 //--------------------------------------------
 // Imports
@@ -27,6 +28,11 @@ $navHeight: 80px;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing:-2px;
+}
+@mixin button-radius{
+	-webkit-border-radius: $buttonRadius;
+	-moz-border-radius: $buttonRadius;
+	border-radius: $buttonRadius;
 }
 
 //--------------------------------------------
@@ -56,13 +62,11 @@ $navHeight: 80px;
 	height: $navHeight;
 }
 .top-bar{
+	padding: 20px;
 	ul{
-
 		li{
 			a{
-				-webkit-border-radius: 100px;
-				-moz-border-radius: 100px;
-				border-radius: 100px;
+				@include button-radius;
 				font-family: 'Oswald', sans-serif;
 				font-weight: 300;
 				text-transform: uppercase;

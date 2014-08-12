@@ -30,11 +30,6 @@
 	</nav>
 
 	<div class="main-panel">
-		
-
-		
-
-
 		<div class="row">
 			<div class="medium-12 columns">
 				<h1>Ritchie Vincent</h1>
