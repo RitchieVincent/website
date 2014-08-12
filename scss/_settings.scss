@@ -59,7 +59,7 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
+$primary-color: #4E104F;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -835,6 +835,7 @@ $magellan-padding: 0 !important;
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color(#fff, $lightness: -5%);
+$panel-bg: $primary-color;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1206,14 +1207,16 @@ $sub-nav-active-cursor: default;
 // TOP BAR
 //
 
-// $include-html-top-bar-classes: $include-html-classes;
+$include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: #333;
 // $topbar-bg: $topbar-bg-color;
+$topbar-bg: $primary-color;
 
 // Height and margin
 // $topbar-height: 45px;
+$topbar-height: $navHeight;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1222,6 +1225,7 @@ $sub-nav-active-cursor: default;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
+$topbar-dropdown-bg: $primary-color;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1233,15 +1237,19 @@ $sub-nav-active-cursor: default;
 // $topbar-link-color: #fff;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
+// $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: #555555;
+// $topbar-link-bg-color-hover: #555555;
 // $topbar-link-bg-hover: #272727;
+$topbar-link-bg-hover: darken( $primary-color, 2% );
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active-hover: darken( $primary-color, 2% );
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: $topbar-height / 3;

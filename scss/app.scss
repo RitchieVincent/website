@@ -1,3 +1,14 @@
+//--------------------------------------------
+// Variables
+//--------------------------------------------
+
+$navHeight: 50px;
+$button-radius: 15px;
+
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+
 @import "settings";
 @import "foundation";
 
@@ -5,33 +16,23 @@
 // Fonts
 //-------------------------------------------
 
-@font-face {
-    font-family: 'bebas_neueregular';
-    src: url('../fonts/BebasNeue-webfont.eot');
-    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/BebasNeue-webfont.woff') format('woff'),
-         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
-         url('../fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-//--------------------------------------------
-// Variables
-//--------------------------------------------
-
-$main-color: #4E104F;
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
 //--------------------------------------------
 // Mixins
 //--------------------------------------------
 
 @mixin main-panel-text{
-	font-family: 'bebas_neueregular';
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
-  	text-align: center;
-  	letter-spacing:-2px;
+	text-align: center;
+	letter-spacing:-2px;
+}
+@mixin button-radius{
+	-webkit-border-radius: $button-radius;
+	-moz-border-radius: $button-radius;
+	border-radius: $button-radius;	
 }
 
 //--------------------------------------------
@@ -39,22 +40,44 @@ $main-color: #4E104F;
 //--------------------------------------------
 
 .main-panel {
-  @include panel($bg:$main-color);
-  height: 600px;
+	@include panel();
+	height: 600px;
+	border: none;
 
-  h1{
-  	@include main-panel-text;
-  	font-size: 8em;
-  	padding-top: 100px;
-  }
-  h2{
-  	@include main-panel-text;
-  	font-size: 5em;
-  }
+	h1{
+		@include main-panel-text;
+		font-size: 7em;
+		padding-top: 120px;
+	}
+	h2{
+		@include main-panel-text;
+		font-size: 5em;
+	}
 
- hr{
- 	opacity: 0.1;
- }
+	hr{
+		opacity: 0.1;
+	}
+}
+
+.top-bar{
+	height: 10px;
+	ul{
+		li{
+			a{
+				line-height: $navHeight;
+				height: $navHeight;
+				font-family: 'Oswald', sans-serif;
+				font-weight: 300;
+				text-transform: uppercase;
+				font-size: 20px;
+				@include button-radius;
+				&:hover{
+					line-height: $navHeight;
+					height: $navHeight;
+				}
+			}
+		}
+	}
 }
 
 

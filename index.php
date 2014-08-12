@@ -6,18 +6,42 @@
 	<title>Ritchie Vincent - Home</title>
 	<link rel="stylesheet" href="stylesheets/app.css" />
 	<script src="bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="stylesheets/animate.min.css">
 </head>
 <body>
 
-		<div class="main-panel">
-			<div class="row">
-				<div class="medium-10 medium-offset-1 columns">
-					<h1>Ritchie Vincent</h1>
-					<hr>
-					<h2>Web developer</h2>
-				</div>      
-			</div>
+
+
+	<div class="main-panel">
+		
+			<nav class="top-bar" data-topbar data-options="sticky_on: large">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="index.php"><!-- <img src="http://ritchievincent.co.uk/img/personalLogo.svg" class="logoNav" /> --></a></h1>
+					</li>
+					<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+				</ul>
+
+				<section class="top-bar-section">
+					<ul class="right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Skills</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Contact me!</a></li>
+					</ul>
+				</section>
+			</nav>
+
+
+		<div class="row">
+			<div class="medium-12 columns">
+				<h1>Ritchie Vincent</h1>
+				<hr>
+				<h2>Web developer</h2>
+			</div>      
 		</div>
+	</div>
 
 	<div class="row">
 		<div class="large-8 medium-8 columns">
