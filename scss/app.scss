@@ -2,8 +2,7 @@
 // Variables
 //--------------------------------------------
 
-$navHeight: 50px;
-$button-radius: 15px;
+$navHeight: 80px;
 
 //--------------------------------------------
 // Imports
@@ -29,11 +28,6 @@ $button-radius: 15px;
 	text-align: center;
 	letter-spacing:-2px;
 }
-@mixin button-radius{
-	-webkit-border-radius: $button-radius;
-	-moz-border-radius: $button-radius;
-	border-radius: $button-radius;	
-}
 
 //--------------------------------------------
 // SCSS
@@ -58,23 +52,21 @@ $button-radius: 15px;
 		opacity: 0.1;
 	}
 }
-
+.logoNav{
+	height: $navHeight;
+}
 .top-bar{
-	height: 10px;
 	ul{
+
 		li{
 			a{
-				line-height: $navHeight;
-				height: $navHeight;
+				-webkit-border-radius: 100px;
+				-moz-border-radius: 100px;
+				border-radius: 100px;
 				font-family: 'Oswald', sans-serif;
 				font-weight: 300;
 				text-transform: uppercase;
 				font-size: 20px;
-				@include button-radius;
-				&:hover{
-					line-height: $navHeight;
-					height: $navHeight;
-				}
 			}
 		}
 	}
