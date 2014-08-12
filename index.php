@@ -32,7 +32,7 @@
 	<div class="main-panel">
 		<div class="row">
 			<div class="medium-12 columns">
-				<h1>Ritchie Vincent</h1>
+				<h1 class="animated tada">Ritchie Vincent</h1>
 				<hr>
 				<h2>Web developer</h2>
 			</div>      

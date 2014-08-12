@@ -2,8 +2,11 @@
 // Variables
 //--------------------------------------------
 
-$navHeight: 50px;
+$navHeight: 45px;
 $buttonRadius: 15px;
+$navLinkColor: #eee;
+$navLinkColorNo: #a0a0a0;
+$transitionSpeed: 0.5s;
 
 //--------------------------------------------
 // Imports
@@ -34,6 +37,12 @@ $buttonRadius: 15px;
 	-moz-border-radius: $buttonRadius;
 	border-radius: $buttonRadius;
 }
+@mixin transitionEase{
+	-webkit-transition: all $transitionSpeed ease;
+    -moz-transition: all $transitionSpeed ease;
+    -o-transition: all $transitionSpeed ease;
+    transition: all $transitionSpeed ease;
+}
 
 //--------------------------------------------
 // SCSS
@@ -62,11 +71,11 @@ $buttonRadius: 15px;
 	height: $navHeight;
 }
 .top-bar{
-	padding: 20px;
 	ul{
 		li{
 			a{
 				@include button-radius;
+				@include transitionEase;
 				font-family: 'Oswald', sans-serif;
 				font-weight: 300;
 				text-transform: uppercase;
