@@ -9,25 +9,26 @@
 	<link rel="stylesheet" href="stylesheets/animate.min.css">
 </head>
 <body>
-
-	<nav class="top-bar" data-topbar>
-		<ul class="title-area">
-			<li class="name">
-				<h1><a href="#"><!-- <img src="http://ritchievincent.co.uk/img/personalLogo.svg" class="logoNav" /> --></a></h1>
-			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-		</ul>
-
-		<section class="top-bar-section">
-			<ul class="right">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Skills</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Contact me!</a></li>
+	<div class="sticky">
+		<nav class="top-bar" data-topbar data-options="sticky_on: large">
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#"><img src="http://ritchievincent.co.uk/img/personalLogo.svg" class="logoNav" id="navBar"/></a></h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 			</ul>
-		</section>
-	</nav>
+
+			<section class="top-bar-section">
+				<ul class="right">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact me!</a></li>
+				</ul>
+			</section>
+		</nav>
+	</div>
 
 	<div class="main-panel">
 		<div class="row">

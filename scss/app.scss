@@ -3,6 +3,7 @@
 //--------------------------------------------
 
 $navHeight: 45px;
+$mainPanelHeight: 500px;
 $buttonRadius: 15px;
 $navLinkColor: #eee;
 $navLinkColorNo: #a0a0a0;
@@ -20,6 +21,7 @@ $transitionSpeed: 0.5s;
 //-------------------------------------------
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
 
 //--------------------------------------------
 // Mixins
@@ -39,9 +41,9 @@ $transitionSpeed: 0.5s;
 }
 @mixin transitionEase{
 	-webkit-transition: all $transitionSpeed ease;
-    -moz-transition: all $transitionSpeed ease;
-    -o-transition: all $transitionSpeed ease;
-    transition: all $transitionSpeed ease;
+	-moz-transition: all $transitionSpeed ease;
+	-o-transition: all $transitionSpeed ease;
+	transition: all $transitionSpeed ease;
 }
 
 //--------------------------------------------
@@ -50,13 +52,15 @@ $transitionSpeed: 0.5s;
 
 .main-panel {
 	@include panel();
-	height: 600px;
+	height: $mainPanelHeight;
 	border: none;
+	margin-bottom:0;
+	padding-bottom:100px;
 
 	h1{
 		@include main-panel-text;
 		font-size: 7em;
-		padding-top: 120px;
+		padding-top: 80px;
 	}
 	h2{
 		@include main-panel-text;
@@ -69,6 +73,7 @@ $transitionSpeed: 0.5s;
 }
 .logoNav{
 	height: $navHeight;
+	opacity: 0;
 }
 .top-bar{
 	ul{
@@ -76,8 +81,7 @@ $transitionSpeed: 0.5s;
 			a{
 				@include button-radius;
 				@include transitionEase;
-				font-family: 'Oswald', sans-serif;
-				font-weight: 300;
+				font-family: 'Roboto', sans-serif;
 				text-transform: uppercase;
 				font-size: 20px;
 			}
@@ -85,10 +89,40 @@ $transitionSpeed: 0.5s;
 	}
 }
 
+.visible{
+	@include transitionEase;
+	opacity: 1;
+}
+.hidden{
+	@include transitionEase;
+	opacity: 0;
+}
 
+@media only screen and (max-width: 807px) {
+	body { font-size: 0.8em; }
+	.main-panel{
+		height: 450px;
+	}
+}
 
-
-
+@media only screen and (max-width: 661px) { /* topbar collapse */
+	body { font-size: 0.5em; }
+	.top-bar{
+		ul{
+			li{
+				a{
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+	.main-panel{
+		height: 250px;
+		h1{
+			padding-top: 20px;
+		}
+	}
+}
 
 // Or selectively include components
 // @import
