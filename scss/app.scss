@@ -2,12 +2,13 @@
 // Variables
 //--------------------------------------------
 
-$navHeight: 45px;
+$navHeight: 65px;
 $mainPanelHeight: 500px;
 $buttonRadius: 15px;
-$navLinkColor: #eee;
-$navLinkColorNo: #a0a0a0;
+$navLinkColor: lighten(#4E104F, 20%);
+$navLinkColorNo: #a9a9a9;
 $transitionSpeed: 0.5s;
+$navColor: #e4e4e4;
 
 //--------------------------------------------
 // Imports
@@ -79,14 +80,33 @@ $transitionSpeed: 0.5s;
 	ul{
 		li{
 			a{
-				@include button-radius;
 				@include transitionEase;
-				font-family: 'Roboto', sans-serif;
+				font-family: 'Oswald', sans-serif;
+				font-weight: 400;
 				text-transform: uppercase;
-				font-size: 20px;
+				font-size: 17px;
 			}
 		}
 	}
+}
+.navList{
+	li{
+		&:before {
+			content: '\00a0\2022\00a0\00a0'; /* | */
+			color:#999;
+			color:rgba(0,0,0,0.2);
+			font-size:20px;
+		}
+		&:first-child:before {
+			content: '';
+		}
+		.navContact{
+			color: #DF636D;
+		}
+	}
+}
+.top-bar-section ul li > a{
+	display: inline;
 }
 
 .visible{
@@ -104,8 +124,22 @@ $transitionSpeed: 0.5s;
 		height: 450px;
 	}
 }
+@media only screen and (max-width: 765px) {
+	.top-bar{
+		ul{
+			li{
+				a{
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+	.title-area{
+		width: 10%;
+	}
+}
 
-@media only screen and (max-width: 661px) { /* topbar collapse */
+@media only screen and (max-width: 640px) { /* topbar collapse */
 	body { font-size: 0.5em; }
 	.top-bar{
 		ul{
@@ -121,6 +155,19 @@ $transitionSpeed: 0.5s;
 		h1{
 			padding-top: 20px;
 		}
+	}
+	.top-bar-section ul li > a{
+		display: block;
+	}
+	.navList{
+		li{
+			&:before {
+				content: '';
+			}
+		}
+	}
+	.title-area{
+		width: 100%;
 	}
 }
 

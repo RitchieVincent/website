@@ -19,12 +19,12 @@
 			</ul>
 
 			<section class="top-bar-section">
-				<ul class="right">
+				<ul class="right navList">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Skills</a></li>
 					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact me!</a></li>
+					<li><a href="#" class="navContact">Contact me!</a></li>
 				</ul>
 			</section>
 		</nav>
